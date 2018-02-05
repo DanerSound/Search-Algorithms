@@ -2,6 +2,6 @@ package base;
 
 public abstract class SorterAlgorithm {
 
-	public abstract int[] sorting(int[] v);
+	public abstract Integer[] sorting(Integer[] v);
 	
 }
