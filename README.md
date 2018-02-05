@@ -4,7 +4,7 @@ This is the second part of the course of Algorithms and Data Structures
 
 of the academic year 2017/2018 of the University of Florence. 
 
->  I'll try to implemente in a very simple (and dumb) way all the algorithms
+>  I'll try to implement in a very simple (and dumb) way all the algorithms
 
 >  So even if you are novice i'll get the **Main Idea** quickly.
 
@@ -39,6 +39,22 @@ of the academic year 2017/2018 of the University of Florence.
    We repeat the process by combining the elements in pairs until all are ordered.
    
 3. The [Bubble-Sort]()
+
+   Like the name, try to imagine a "group" of objects that float in the water.
+   
+   The _heaviest_ go **down** while the _lighter_ ones stay afloat.
+
+   The algorithm must be executed **several times** to order the considered structure.
+   
+   At the end of every passage we are sure that the **greatest element has reached its final position**. 
+   
+   >the procedure is repeated with n-1 elements.
+
+   The algorithm works by **comparing adjacent** elements and exchanging them 
+   
+   if the relative order between the two is not respected.
+
+4. The [Counting-Sort]()
 
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
       
