@@ -38,7 +38,7 @@ of the academic year 2017/2018 of the University of Florence.
    
    We repeat the process by combining the elements in pairs until all are ordered.
    
-3. The [Bubble-Sort]()
+3. The [Bubble-Sort](https://github.com/DanerSound/Search-Algorithms/tree/bubbler-sort)
 
    Like the name, try to imagine a "group" of objects that float in the water.
    
@@ -56,5 +56,13 @@ of the academic year 2017/2018 of the University of Florence.
 
 4. The [Counting-Sort]()
 
+This algorithm bases its operation in the hypothesis that the set of n elements 
+
+to be sortered is compressed between a number 0 and k (n dimension of the vector and k€N)
+
+>let x be a number, the most important step is the calculation of the predecessors 
+of x because x will be positioned in the position (x + 1)
+
+   
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
       
