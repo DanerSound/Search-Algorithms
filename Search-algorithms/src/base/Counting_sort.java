@@ -18,10 +18,6 @@ public class Counting_sort {
 		for(int j=v.length;j>=1;j--){
 			def[supp[v[j]]]=v[j];
 			supp[v[j]]=supp[v[j]]-1;			
-		}
-		
-		
+		}	
 	}
-	
-
 }
