@@ -61,6 +61,8 @@ of the academic year 2017/2018 of the University of Florence.
    with the objective of improving performance.
    
    Use a check flag to _avoid continuing_ to iterate when no exchanges are performed after some iteration.
+   
+   ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
 
 4. The [Counting-Sort](https://github.com/DanerSound/Search-Algorithms/tree/Counting-sort)
 
