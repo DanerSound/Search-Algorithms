@@ -1,27 +1,30 @@
 package base;
 
-public class BubblesortFlaged {	
+public class BubblesortFlaged extends SorterAlgorithm {
+
 	/**
 	 * it will order the array v not view
-	 * @param v messy array
 	 * 
-	 * */	
-	public static void sorting(int v[]) {
-		int i,j,tmp;
-		i=v.length;	
-		boolean sorted=false;
-		
-		while((i>=1)&&(!sorted)){
-			sorted=true;
-			for(j=1;j<i;j++){
-				if(v[j-1]>v[j]){
-				   tmp=v[j-1];
-				   v[j-1]=v[j];
-				   v[j]=tmp;
-				   sorted=false;
+	 * @param Integer[] messy array
+	 * 
+	 */
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered) {
+		int i = arrayToBeOrdered.length;
+		boolean sorted = false;
+
+		while ((i >= 1) && (!sorted)) {
+			sorted = true;
+			for (int j = 1; j < i; j++) {
+				if (arrayToBeOrdered[j - 1] > arrayToBeOrdered[j]) {
+					int tmp = arrayToBeOrdered[j - 1];
+					arrayToBeOrdered[j - 1] = arrayToBeOrdered[j];
+					arrayToBeOrdered[j] = tmp;
+					sorted = false;
 				}
 			}
-		 i=i-1;	
-		}		
+			i = i - 1;
+		}
+		return arrayToBeOrdered;
 	}
 }
