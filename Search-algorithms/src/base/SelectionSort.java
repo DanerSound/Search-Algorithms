@@ -1,19 +1,19 @@
 package base;
 
-public class SelectionSort {
-
-  static void sorting(int[] v) {
-  int i, j, min, tmp;
-
-  for (i = 0; i <= v.length - 2; i++) {
-		min = i;
-		for (j = i + 1; j < v.length - 1; j++) {
-			if (v[j] < v[min])
-				min = j;
+public class SelectionSort extends SorterAlgorithm {
+	
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered) {
+		for (int i = 0; i <= arrayToBeOrdered.length - 2; i++) {
+			int min = i;
+			for (int j = i + 1; j < arrayToBeOrdered.length - 1; j++) {
+				if (arrayToBeOrdered[j] < arrayToBeOrdered[min])
+					min = j;
 			}
-		tmp = v[min];
-		v[min] = v[i];
-		v[i] = tmp;
+			int tmp = arrayToBeOrdered[min];
+			arrayToBeOrdered[min] = arrayToBeOrdered[i];
+			arrayToBeOrdered[i] = tmp;
 		}
+		return arrayToBeOrdered;
 	}
 }
