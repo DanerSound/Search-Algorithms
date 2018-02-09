@@ -5,8 +5,8 @@ public class InsertionSort extends SorterAlgorithm {
 	/**
 	 * Returns an ordered array of integer elements
 	 * 
-	 * @param Integer[]  messy array
-	 * @return Integer[] array ordered
+	 * @param arrayToBeOrdered messy array
+	 * @return array ordered
 	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered) {
