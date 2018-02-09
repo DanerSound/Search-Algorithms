@@ -2,9 +2,8 @@ package base;
 
 public class SelectionSort {
 
-  static int i, j, min, tmp;
-
   static void sorting(int[] v) {
+  int i, j, min, tmp;
 
   for (i = 0; i <= v.length - 2; i++) {
 		min = i;
