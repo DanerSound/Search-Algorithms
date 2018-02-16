@@ -23,4 +23,10 @@ public class SelectionSort extends SorterAlgorithm {
 		return null;
 	}
 
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
