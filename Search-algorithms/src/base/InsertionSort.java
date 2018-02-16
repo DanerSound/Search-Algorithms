@@ -21,4 +21,10 @@ public class InsertionSort extends SorterAlgorithm {
 		}
 		return arrayToBeOrdered;
 	}
+
+	@Override
+	public Integer[] sorting(Integer[] v, Integer[] b, Integer maxValue) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
