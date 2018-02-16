@@ -2,23 +2,24 @@ package base;
 
 public class QuicksortV1 extends SorterAlgorithm{
 	
-	void swap(Integer a,Integer b){
+	private void swap(Integer a,Integer b){
 		Integer tmp;
 		tmp=a;
 		a=b;
 		b=tmp;
 	}
 	
-	Integer partition(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement){
-		Integer pivot=arrayToBeOrdered[lastElement];
+	private Integer partition(Integer[] arrayToBeOrdered, Integer firstElement, Integer last){
+		
+		Integer pivot=arrayToBeOrdered[last-1];
 		Integer pivotIndex=firstElement-1;
 		
-		for(Integer j=firstElement;j<=lastElement-1;j++) {
-			if(arrayToBeOrdered[j]<=pivot){
+		for(Integer j=firstElement;j<=last-1;j++) {
+			if(arrayToBeOrdered[j]<pivot){
 				pivotIndex=pivotIndex+1;
 				swap(arrayToBeOrdered[pivotIndex], arrayToBeOrdered[j]);
-			}
-			swap(pivotIndex, pivot);
+			}else
+			swap(arrayToBeOrdered[pivotIndex], arrayToBeOrdered[arrayToBeOrdered.length-1]);
 		}
 		return pivotIndex;
 	}
@@ -30,7 +31,7 @@ public class QuicksortV1 extends SorterAlgorithm{
 		if(lastElement>firstElement){
 			index=partition(arrayToBeOrdered,firstElement,lastElement);
 			sorting(arrayToBeOrdered, firstElement, index-1);
-			sorting(arrayToBeOrdered, index+1, lastElement);
+			sorting(arrayToBeOrdered, index+1, arrayToBeOrdered.length);
 		}
 		return arrayToBeOrdered;
 	}
