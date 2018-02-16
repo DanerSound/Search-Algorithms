@@ -72,8 +72,6 @@ of the academic year 2017/2018 of the University of Florence.
 
    >let x be a number, the most important step is the calculation of the predecessors 
    of x because x will be positioned in the position (x + 1)
-
-   ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
    
 5. The [QuickSort]()
 

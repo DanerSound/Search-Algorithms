@@ -1,18 +1,24 @@
 package base;
 
-public class InsertionSort {
-	
-	static int i, j, max;
+public class InsertionSort extends SorterAlgorithm {
 
-	static void sorting(int[] v) {
-		for (i = 1; i < v.length; i++) {
-			max = v[i];
-			j = i;
-			while (j - 1 >= 0 && v[j - 1] > max) {
-				v[j] = v[j - 1];
+	/**
+	 * Returns an ordered array of integer elements
+	 * 
+	 * @param arrayToBeOrdered messy array
+	 * @return array ordered
+	 */
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered) {
+		for (int i = 1; i < arrayToBeOrdered.length; i++) {
+			int max = arrayToBeOrdered[i];
+			int j = i;
+			while (j - 1 >= 0 && arrayToBeOrdered[j - 1] > max) {
+				arrayToBeOrdered[j] = arrayToBeOrdered[j - 1];
 				j = j - 1;
 			}
-			v[j] = max;
+			arrayToBeOrdered[j] = max;
 		}
+		return arrayToBeOrdered;
 	}
 }
