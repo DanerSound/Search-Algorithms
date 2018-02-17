@@ -9,17 +9,17 @@ public class QuicksortV1 extends SorterAlgorithm{
 		b=tmp;
 	}
 	
-	private Integer partition(Integer[] arrayToBeOrdered, Integer firstElement, Integer last){
+	private Integer partition(Integer[] currentArray, Integer first, Integer last){
 		
-		Integer pivot=arrayToBeOrdered[last-1];
-		Integer pivotIndex=firstElement-1;
+		Integer pivot=currentArray[last-1];
+		Integer pivotIndex=first-1;
 		
-		for(Integer j=firstElement;j<=last-1;j++) {
-			if(arrayToBeOrdered[j]<pivot){
+		for(Integer j=first;j<=last-1;j++) {
+			if(currentArray[j]<pivot){
 				pivotIndex=pivotIndex+1;
-				swap(arrayToBeOrdered[pivotIndex], arrayToBeOrdered[j]);
+				swap(currentArray[pivotIndex], currentArray[j]);
 			}else
-			swap(arrayToBeOrdered[pivotIndex], arrayToBeOrdered[arrayToBeOrdered.length-1]);
+			swap(currentArray[pivotIndex], currentArray[currentArray.length-1]);
 		}
 		return pivotIndex;
 	}
