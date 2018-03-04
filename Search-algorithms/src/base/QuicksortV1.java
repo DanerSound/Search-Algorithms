@@ -2,36 +2,37 @@ package base;
 
 public class QuicksortV1 extends SorterAlgorithm{
 	
-	private void swap(Integer a,Integer b){
-		Integer tmp;
-		tmp=a;
-		a=b;
-		b=tmp;
+	private Integer[] swap(Integer index_i,Integer index_j,Integer[] current){
+		
+		Integer tmp=current[index_i];
+		current[index_i]=current[index_j];
+		current[index_j]=tmp;
+		return current;
 	}
 	
 	private Integer partition(Integer[] currentArray, Integer first, Integer last){
 		
-		Integer pivot=currentArray[last-1];
+		Integer pivot=currentArray[last];
 		Integer pivotIndex=first-1;
 		
-		for(Integer j=first;j<=last-1;j++) {
+		for(Integer j=first;j<last;j++) {
 			if(currentArray[j]<pivot){
 				pivotIndex=pivotIndex+1;
-				swap(currentArray[pivotIndex], currentArray[j]);
-			}else
-			swap(currentArray[pivotIndex], currentArray[currentArray.length-1]);
+				currentArray=swap(pivotIndex,j,currentArray);
+			}
 		}
-		return pivotIndex;
+		currentArray=swap(pivotIndex+1,last,currentArray);
+		return pivotIndex+1;
 	}
 	
 
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		Integer index;
+		 
 		if(lastElement>firstElement){
-			index=partition(arrayToBeOrdered,firstElement,lastElement);
-			sorting(arrayToBeOrdered, firstElement, index-1);
-			sorting(arrayToBeOrdered, index+1, arrayToBeOrdered.length);
+			Integer index=partition(arrayToBeOrdered,firstElement,lastElement);
+			arrayToBeOrdered=sorting(arrayToBeOrdered, firstElement, index-1);
+			arrayToBeOrdered=sorting(arrayToBeOrdered, index+1, lastElement);
 		}
 		return arrayToBeOrdered;
 	}
