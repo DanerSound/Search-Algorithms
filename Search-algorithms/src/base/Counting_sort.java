@@ -1,10 +1,14 @@
 package base;
 
-public class Counting_sort extends SorterAlgorithm {
+import utility.*;
 
-	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrder,Integer[] OrderArray, Integer maxValue ) {
+public class Counting_sort extends SorterAlgorithm {
+	
+	public Integer[] sorting(Integer[] arrayToBeOrder){
+		 Integer maxValue =GiveMax.findMax(arrayToBeOrder);
+		
 		int[] supp = new int[maxValue+1];
+		Integer[] OrderArray= new Integer[arrayToBeOrder.length];
 		
 		for(int  i=0;i<maxValue;i++)
 			supp[i]=0;		
@@ -21,15 +25,9 @@ public class Counting_sort extends SorterAlgorithm {
 		}
 		return OrderArray;
 	}
-	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		// TODO Auto-generated method stub
-		return null;
+		return sorting(arrayToBeOrdered);
 	}
-	
 }
