@@ -1,9 +1,16 @@
 package base;
 
+import utility.*;
+
 public class Counting_sort extends SorterAlgorithm {
 
-	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrder,Integer[] OrderArray,Integer maxValue ) {
+		
+	//	Integer Value=GiveMax.findMax(arrayToBeOrder);
+	
+
 	public Integer[] sorting(Integer[] arrayToBeOrder, Integer maxValue ){
+
 		int[] supp = new int[maxValue+1];
 		Integer[] OrderArray= new Integer[arrayToBeOrder.length];
 		
