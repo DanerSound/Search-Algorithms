@@ -3,14 +3,10 @@ package base;
 import utility.*;
 
 public class Counting_sort extends SorterAlgorithm {
-
-	public Integer[] sorting(Integer[] arrayToBeOrder,Integer[] OrderArray,Integer maxValue ) {
-		
-	//	Integer Value=GiveMax.findMax(arrayToBeOrder);
 	
-
-	public Integer[] sorting(Integer[] arrayToBeOrder, Integer maxValue ){
-
+	public Integer[] sorting(Integer[] arrayToBeOrder){
+		 Integer maxValue =GiveMax.findMax(arrayToBeOrder);
+		
 		int[] supp = new int[maxValue+1];
 		Integer[] OrderArray= new Integer[arrayToBeOrder.length];
 		
@@ -29,14 +25,9 @@ public class Counting_sort extends SorterAlgorithm {
 		}
 		return OrderArray;
 	}
-	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		// TODO Auto-generated method stub
-		return null;
+		return sorting(arrayToBeOrdered);
 	}
 }
