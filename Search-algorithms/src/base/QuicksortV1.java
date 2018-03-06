@@ -24,30 +24,19 @@ public class QuicksortV1 extends SorterAlgorithm{
 		currentArray=swap(pivotIndex+1,last,currentArray);
 		return pivotIndex+1;
 	}
-	
-
 	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
+	
+public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
 		 
 		if(lastElement>firstElement){
-			Integer index=partition(arrayToBeOrdered,firstElement,lastElement);
+			Integer index=partition(arrayToBeOrdered,firstElement,lastElement-1);
 			arrayToBeOrdered=sorting(arrayToBeOrdered, firstElement, index-1);
 			arrayToBeOrdered=sorting(arrayToBeOrdered, index+1, lastElement);
 		}
 		return arrayToBeOrdered;
 	}
-	
-	
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		// TODO Auto-generated method stub
-		return null;
+		return sorting(arrayToBeOrdered,0,arrayToBeOrdered.length-1);
 	}
-
-	@Override
-	public Integer[] sorting(Integer[] v, Integer[] b, Integer maxValue) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
