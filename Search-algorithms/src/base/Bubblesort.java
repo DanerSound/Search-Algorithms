@@ -15,16 +15,8 @@ public class Bubblesort extends SorterAlgorithm {
 		}
 		return arrayToBeOrdered;
 	}
-
-	@Override
-	public Integer[] sorting(Integer[] v, Integer[] b, Integer maxValue) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		// TODO Auto-generated method stub
-		return null;
+		return sorting(arrayToBeOrdered);
 	}
 }
