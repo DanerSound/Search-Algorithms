@@ -25,7 +25,8 @@ public class QuicksortV1 extends SorterAlgorithm{
 		return pivotIndex+1;
 	}
 	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
+	
+public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
 		 
 		if(lastElement>firstElement){
 			Integer index=partition(arrayToBeOrdered,firstElement,lastElement-1);
