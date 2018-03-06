@@ -4,12 +4,15 @@ import utility.*;
 
 public class Counting_sort extends SorterAlgorithm {
 
-	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrder,Integer[] OrderArray,Integer maxValue ) {
 		
-		Integer Value=GiveMax.findMax(arrayToBeOrder);
+	//	Integer Value=GiveMax.findMax(arrayToBeOrder);
 	
+
+	public Integer[] sorting(Integer[] arrayToBeOrder, Integer maxValue ){
+
 		int[] supp = new int[maxValue+1];
+		Integer[] OrderArray= new Integer[arrayToBeOrder.length];
 		
 		for(int  i=0;i<maxValue;i++)
 			supp[i]=0;		
@@ -36,5 +39,4 @@ public class Counting_sort extends SorterAlgorithm {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 }
