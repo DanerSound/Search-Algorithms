@@ -5,7 +5,7 @@ import utility.*;
 public class Counting_sort extends SorterAlgorithm {
 	
 	public Integer[] sorting(Integer[] arrayToBeOrder){
-		 Integer maxValue =GiveMax.findMax(arrayToBeOrder);
+		 Integer maxValue =MathTools.findMax(arrayToBeOrder);
 		
 		int[] supp = new int[maxValue+1];
 		Integer[] OrderArray= new Integer[arrayToBeOrder.length];

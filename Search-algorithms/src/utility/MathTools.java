@@ -1,6 +1,6 @@
 package utility;
 
-public class GiveMax {
+public class MathTools {
 	public static Integer findMax(Integer[] Array) {
 		Integer max = Array[0];
 
