@@ -2,7 +2,7 @@ package base;
 
 import utility.*;
 
-public class Counting_sort extends SorterAlgorithm {
+public class CountingSort extends SorterAlgorithm {
 	
 	public Integer[] sorting(Integer[] arrayToBeOrder){
 		 Integer maxValue =MathTools.findMax(arrayToBeOrder);
