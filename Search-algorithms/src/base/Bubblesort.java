@@ -15,8 +15,18 @@ public class Bubblesort extends SorterAlgorithm {
 		}
 		return arrayToBeOrdered;
 	}
+
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		return sorting(arrayToBeOrdered);
+		for (int i = lastElement + 1; i > 1; i--) {
+			for (int j = firstElement + 1; j < i; j++) {
+				if (arrayToBeOrdered[j - 1] > arrayToBeOrdered[j]) {
+					int tmp = arrayToBeOrdered[j - 1];
+					arrayToBeOrdered[j - 1] = arrayToBeOrdered[j];
+					arrayToBeOrdered[j] = tmp;
+				}
+			}
+		}
+		return arrayToBeOrdered;
 	}
 }
