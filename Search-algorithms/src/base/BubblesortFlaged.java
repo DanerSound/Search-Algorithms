@@ -5,17 +5,23 @@ public class BubblesortFlaged extends SorterAlgorithm {
 	/**
 	 * it will order the array v not view
 	 * 
-	 * @param Integer[] messy array
+	 * @param Integer[]
+	 *            messy array
 	 * 
 	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		int i = arrayToBeOrdered.length;
+		return sorting(arrayToBeOrdered,0,arrayToBeOrdered.length-1);
+	}
+
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
+		int i = lastElement + 1;
 		boolean sorted = false;
 
-		while ((i >= 1) && (!sorted)) {
+		while ((i >= firstElement + 1) && (!sorted)) {
 			sorted = true;
-			for (int j = 1; j < i; j++) {
+			for (int j = firstElement + 1; j < i; j++) {
 				if (arrayToBeOrdered[j - 1] > arrayToBeOrdered[j]) {
 					int tmp = arrayToBeOrdered[j - 1];
 					arrayToBeOrdered[j - 1] = arrayToBeOrdered[j];
@@ -26,9 +32,5 @@ public class BubblesortFlaged extends SorterAlgorithm {
 			i = i - 1;
 		}
 		return arrayToBeOrdered;
-	}
-	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		return sorting(arrayToBeOrdered);
 	}
 }
