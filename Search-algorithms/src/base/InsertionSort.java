@@ -1,10 +1,13 @@
 package base;
 
 public class InsertionSort extends SorterAlgorithm {
+
 	/**
-	 * Returns an ordered array of integer elements
+	 * This method orders the input array given, using the Counting sort algorithm.
 	 * 
-	 * @param arrayToBeOrdered messy array
+	 * @author Andre Cristhian (DanerSound)
+	 * @param arrayToBeOrdered
+	 *            messy array
 	 * @return array ordered
 	 */
 	@Override
@@ -20,6 +23,20 @@ public class InsertionSort extends SorterAlgorithm {
 		}
 		return arrayToBeOrdered;
 	}
+
+	/**
+	 * This method orders a sub-portion of the input array given the indexes of the
+	 * range, using the Counting sort algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @param firstElement
+	 *            left extreme of the array
+	 * @param lastElement
+	 *            right extreme of the array
+	 * @return array ordered
+	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
 		return sorting(arrayToBeOrdered);

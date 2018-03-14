@@ -2,16 +2,22 @@ package base;
 
 public class QuicksortV2 extends SorterAlgorithm {
 
-	private Integer[] swap(Integer[] current, Integer index_i, Integer index_j) {
-		Integer tmp = current[index_i];
-		current[index_i] = current[index_j];
-		current[index_j] = tmp;
-		return current;
-	}
-
+	/**
+	 * This method orders a sub-portion of the input array given the indexes of the
+	 * range, using the better Quick sort algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @param firstElement
+	 *            left extreme of the array
+	 * @param lastElement
+	 *            right extreme of the array
+	 * @return array ordered
+	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
-		if (lastElement -1> firstElement) {
+		if (lastElement - 1 > firstElement) {
 			Integer pivot = arrayToBeOrdered[lastElement];
 			Integer left_index = firstElement;
 			Integer right_index = lastElement - 1;
@@ -19,9 +25,10 @@ public class QuicksortV2 extends SorterAlgorithm {
 			while (true) {
 				while (arrayToBeOrdered[left_index] < pivot)
 					left_index = left_index + 1;
-				while (right_index>=0 && arrayToBeOrdered[right_index] > pivot)
+				while (right_index >= 0 && arrayToBeOrdered[right_index] > pivot)
 					right_index = right_index - 1;
-				if (left_index >= right_index) break;
+				if (left_index >= right_index)
+					break;
 				arrayToBeOrdered = swap(arrayToBeOrdered, left_index, right_index);
 			}
 			arrayToBeOrdered = swap(arrayToBeOrdered, left_index, lastElement);
@@ -31,9 +38,25 @@ public class QuicksortV2 extends SorterAlgorithm {
 		return arrayToBeOrdered;
 	}
 
+	/**
+	 * This method orders the input array given, using the better Quick sort
+	 * algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @return array ordered
+	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		return sorting(arrayToBeOrdered, 0, arrayToBeOrdered.length-1);
+		return sorting(arrayToBeOrdered, 0, arrayToBeOrdered.length - 1);
+	}
+
+	private Integer[] swap(Integer[] current, Integer index_i, Integer index_j) {
+		Integer tmp = current[index_i];
+		current[index_i] = current[index_j];
+		current[index_j] = tmp;
+		return current;
 	}
 
 }
