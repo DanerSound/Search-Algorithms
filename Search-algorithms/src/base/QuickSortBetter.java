@@ -2,6 +2,35 @@ package base;
 
 public class QuickSortBetter extends SorterAlgorithm {
 
+	/**
+	 * This method orders the input array given, using the better Quick sort
+	 * algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @author Gabriele Puliti (Wabri)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @return array ordered
+	 */
+	@Override
+	public Integer[] sorting(Integer[] arrayToBeOrdered) {
+		return sorting(arrayToBeOrdered, 0, arrayToBeOrdered.length - 1);
+	}
+
+	/**
+	 * This method orders a sub-portion of the input array given the indexes of the
+	 * range, using the better Quick sort algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @author Gabriele Puliti (Wabri)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @param firstElement
+	 *            left extreme of the array
+	 * @param lastElement
+	 *            right extreme of the array
+	 * @return array ordered
+	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
 		if (lastElement - 1 > firstElement) {
@@ -23,11 +52,6 @@ public class QuickSortBetter extends SorterAlgorithm {
 			arrayToBeOrdered = sorting(arrayToBeOrdered, left_index + 1, lastElement);
 		}
 		return arrayToBeOrdered;
-	}
-
-	@Override
-	public Integer[] sorting(Integer[] arrayToBeOrdered) {
-		return sorting(arrayToBeOrdered, 0, arrayToBeOrdered.length - 1);
 	}
 
 	private Integer[] swap(Integer[] current, Integer index_i, Integer index_j) {
