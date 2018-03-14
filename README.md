@@ -8,13 +8,13 @@ of the academic year 2017/2018 of the University of Florence.
 
 >  So even if you are novice i'll get the **Main Idea** quickly.
 
-0. The [RandNumbers](https://github.com/DanerSound/Search-Algorithms/tree/master/randNumbers) :
+0. The [RandNumbers](https://github.com/DanerSound/Search-Algorithms/blob/master/randNumbers/scr/randomizer/Randomizer.java) :
 
    This is a very simple Java Class that generate some numbers for make the test using the algorithms.
    
       * ps. If your are asking " why he didnt use the java base ramdon generation ? "... well because it i'll be _too easy_ :D
       
-1. The [Selection-Sort](https://github.com/DanerSound/Search-Algorithms/tree/sequential-sort) :
+1. The [Selection-Sort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/SelectionSort.java) :
 
    This Algorithm works in place.
    
@@ -28,7 +28,7 @@ of the academic year 2017/2018 of the University of Florence.
         to make swaps.
    
    
-2. The [Insertion-Sort](https://github.com/DanerSound/Search-Algorithms/tree/Insertion-sort/Search-algorithms/src/base)
+2. The [Insertion-Sort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/InsertionSort.java)
 
    The intuitive idea behind this algorithm is to imagine the ordering of playing cards in the hand.
    
@@ -38,7 +38,7 @@ of the academic year 2017/2018 of the University of Florence.
    
    We repeat the process by combining the elements in pairs until all are ordered.
    
-3. The [Bubble-Sort](https://github.com/DanerSound/Search-Algorithms/tree/bubbler-sort)
+3. The [Bubble-Sort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/Bubblesort.java)
 
    Like the name, try to imagine a "group" of objects that float in the water.
    
@@ -54,7 +54,7 @@ of the academic year 2017/2018 of the University of Florence.
    
    if the relative order between the two is not respected.
    
-3.1 The [FlagedBubbleSort](https://github.com/DanerSound/Search-Algorithms/tree/bb-sortFlag)
+3.1 The [FlagedBubbleSort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/BubblesortFlaged.java)
 
    This algorithm has a small variant compared to the 
    [original version](https://github.com/DanerSound/Search-Algorithms/tree/bubbler-sort) 
@@ -62,7 +62,7 @@ of the academic year 2017/2018 of the University of Florence.
    
    Use a check flag to _avoid continuing_ to iterate when no exchanges are performed after some iteration.
 
-4. The [Counting-Sort](https://github.com/DanerSound/Search-Algorithms/tree/Counting-sort)
+4. The [Counting-Sort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/CountingSort.java)
 
    This algorithm bases its operation in the hypothesis that the set of n elements 
 
@@ -71,7 +71,7 @@ of the academic year 2017/2018 of the University of Florence.
    >let x be a number, the most important step is the calculation of the predecessors 
    of x because x will be positioned in the position (x + 1)
    
-5. The [QuickSort]()
+5. The [QuickSort](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/QuicksortV1.java)
 
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
 
