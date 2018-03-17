@@ -71,7 +71,7 @@ of the academic year 2017/2018 of the University of Florence.
    >let x be a number, the most important step is the calculation of the predecessors 
    of x because x will be positioned in the position (x + 1)
    
-5. The [QuicksortV1](hhttps://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/QuickSort.java)
+5. The [QuicksortV1](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/QuickSort.java)
 
    V1 is versione one, this is the most common implementation of the Quicksort that you can find in a text book.
    
@@ -79,9 +79,32 @@ of the academic year 2017/2018 of the University of Florence.
    
    the array, so it swap to the leftside all the elements less than (pivot) or equal.
       
-      >if the Element is on the right part of the array it will be swaped with with himself
+      >if the Element is on the right part of the array it will be swaped with with **himself**
       
-   just at the end pivot will be swaped to his _final position_ 
+   just at the end pivot will be swaped to his _final position_ .
+   
+   So it repeat the process in the two parts with the some logic.
+   
+5.1 The[QuicksortV2](https://github.com/DanerSound/Search-Algorithms/blob/master/Search-algorithms/src/base/QuickSortBetter.java)
+
+   V2 is versione two, this version try to merge the Sorting part with the Partion one.
+   
+   the partition part is made inside the while(true)cycle that use two index to slide all the array from left and from the right
+   
+   the elements from leftside **MUST** be less than pivot, the elements from the rightside **MUST** be greater the pivot .
+   
+   the  while(true)cycle will stop just if the left_index is greater or equal to the right_index, so the pivot will be swaped to 
+   
+   his final position. So it repeat the process in the two parts with the some logic.
+   
+5.2 The[IterativeQuickSort]()
 
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
+
+6. The [MergeSort]()
+
+   ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
+
+
+
 
