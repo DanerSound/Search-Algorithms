@@ -6,6 +6,15 @@ import utility.*;
 
 public class CountingSort extends SorterAlgorithm {
 
+	/**
+	 * This method orders the input array given, using the Counting sort algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @author Gabriele Puliti (Wabri)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @return array ordered
+	 */
 	public Integer[] sorting(Integer[] arrayToBeOrdered) {
 		Integer maxValue = MathTools.findMax(arrayToBeOrdered);
 
@@ -28,6 +37,20 @@ public class CountingSort extends SorterAlgorithm {
 		return OrderArray;
 	}
 
+	/**
+	 * This method orders a sub-portion of the input array given the indexes of the
+	 * range, using the Counting sort algorithm.
+	 * 
+	 * @author Andre Cristhian (DanerSound)
+	 * @author Gabriele Puliti (Wabri)
+	 * @param arrayToBeOrdered
+	 *            messy array
+	 * @param firstElement
+	 *            left extreme of the array
+	 * @param lastElement
+	 *            right extreme of the array
+	 * @return array ordered
+	 */
 	@Override
 	public Integer[] sorting(Integer[] arrayToBeOrdered, Integer firstElement, Integer lastElement) {
 		Integer[] narrowArray = Arrays.copyOfRange(arrayToBeOrdered, firstElement, lastElement + 1);
