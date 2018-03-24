@@ -19,7 +19,7 @@ public class MergeSort extends SorterAlgorithm{
 	
 	/**
 	 * This method orders a sub-portion of the input array given the indexes of the
-	 * range, using the Quick sort algorithm.
+	 * range, using the Merge sort algorithm.
 	 * 
 	 * @author Andre Cristhian (DanerSound)
 	 * @author Gabriele Puliti (Wabri)
