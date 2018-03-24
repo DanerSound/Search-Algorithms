@@ -102,6 +102,10 @@ of the academic year 2017/2018 of the University of Florence.
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
 
 6. The [MergeSort]()
+   
+   This Algorithm first uses a _support structure_ to perform the sorting.
+   
+   to avoid the use of guards during the merging operation, the upper part of the array is **copied in reverse**.
 
    ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
 
